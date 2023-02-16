@@ -5,13 +5,14 @@
 // Create a new speechSynthesis object
 var synth = window.speechSynthesis;
 // Learn more about SpeechSynthesis.speak() at https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak
-var textToSpeak = '';
+var newSentence;
 var buttonNoun = document.querySelector('button#noun');
 var buttonVerb = document.querySelector('button#verb');
 var buttonAdjective = document.querySelector('button#adjective');
 var buttonNounTwo = document.querySelector('button#noun2');
 var buttonPlaces = document.querySelector('button#places');
 var buttonAll = document.querySelector('button#all');
+var buttonSpeakNow = document.querySelector('button#speak');
 
 var randomNumber = Math.floor(Math.random() * 7) - 1;
  
@@ -26,7 +27,6 @@ var adjectiveArray = ['a funny', 'a scary', 'a goofy', 'a slimy', 'a barking', '
 var nounTwoArray = ['goat', 'monkey', 'fish', 'cow', 'frog', 'bug', 'worm'];
 var placesArray = ['on the moon', 'on the chair', 'in my spaghetti', 'in my soup', 'on the grass', 'in my shoes'];
 
-var newSentence = [];
 
 /* Functions
 -------------------------------------------------- */
@@ -37,27 +37,59 @@ function speakNow(string) {
 	synth.speak(utterThis);
 }
 
-// need a function to grab one value from each array
-function fullSentence(){
-	
-}
-// need a function for each array to grab value independently
-/*function selectNoun(){
-	newSentence = newSentence.push(noun);
-}	var noun = nounArray[randomNumber];
-*/
-
 /* Event Listeners
 -------------------------------------------------- */
-// Onclick handler for the button that speaks the text contained in the above var textToSpeak
 
 buttonNoun.onclick = function(){
 	var noun = nounArray[randomNumber];
-	newSentence = newSentence.push(noun);
-	speakNow(newSentence);
+	newSentence = noun;
+	speakNow(noun);
+	console.log(newSentence);
 }
 
+buttonVerb.onclick = function(){
+	var verb = verbArray[randomNumber];
+	newSentence =+ ` ${verb}`;
+	speakNow(verb);
+	console.log(newSentence);
+}
+
+buttonAdjective.onclick = function(){
+	var adjective = adjectiveArray[randomNumber];
+	newSentence =+ ` ${adjective}`;
+	speakNow(adjective);
+	console.log(newSentence);
+}
+
+buttonNounTwo.onclick = function(){
+	var nounTwo = nounTwoArray[randomNumber];
+	newSentence =+ ` ${nounTwo}`;
+	speakNow(nounTwo);
+	console.log(newSentence);
+}
+
+buttonPlaces.onclick = function(){
+	var places = placesArray[randomNumber];
+	newSentence =+ ` ${places}`;
+	speakNow(places);
+}
+
+buttonAll.onclick = function(){
+	var noun = nounArray[randomNumber];
+	var verb = verbArray[randomNumber];
+	var adjective = adjectiveArray[randomNumber];
+	var nounTwo = nounTwoArray[randomNumber];
+	var places = placesArray[randomNumber];
+	newSentence = `${noun} ${verb} ${adjective} ${nounTwo} ${places}`;
+	
+	console.log(newSentence);
+}
+buttonSpeakNow.onclick = function(){
+	speakNow(newSentence);
+}
+/*
 //below is original
 speakButton.onclick = function() {
 	speakNow(textToSpeak);
 }
+*/
