@@ -9,14 +9,61 @@
 </head>
 
 <body>
-	<button id = noun>Noun</button>
-	<button id = verb>Verb</button>
-	<button id = adjective>Adjective</button>
-	<button id = noun2>Noun</button>
-	<button id = places>Places</button>
-	<button id = all>Random</button>
-	<button id = speak>Speak Now</button>
+	<div class = "flex-container">
+		<div class = "flex-child noun">
+			<p>The Turkey</p>
+			<p>Mom</p>
+			<p>Dad</p>
+			<p>The cog</p>
+			<p>My teacher</p>
+			<p>The elephant</p>
+			<p>The cat</p>
+			<button id = noun>Noun</button>
+		</div>
+		<div class = "flex-child verb">
+			<p>sat on</p>
+			<p>ate</p>
+			<p>danced with</p>
+			<p>saw</p>
+			<p>doesn't like</p>
+			<p>kissed</p>
+			<button id = verb>Verb</button>
+		</div>
+		<div class = "flex-child adjective">
+			<p>a funny</p>
+			<p>a scary</p>
+			<p>a goofy</p>
+			<p>a slimy</p>
+			<p>a barking</p>
+			<p>a fat</p>
+			<button id = adjective>Adjective</button>
+		</div>
+		<div class = "flex-child noun2">
+			<p>goat</p>
+			<p>monkey</p>
+			<p>fish</p>
+			<p>cow</p>
+			<p>frog</p>
+			<p>bug</p>
+			<p>worm</p>
+			<button id = noun2>Noun</button>
+		</div>
+		<div class = "flex-child places">
+			<p>on the moon</p>
+			<p>on the chair</p>
+			<p>in my spaghetti</p>
+			<p>in my soup</p>
+			<p>on the grass</p>
+			<p>in my shoes</p>
+			<button id = places>Places</button>
+		</div>
+	</div>
 
+	<div>
+		<button id = all>Random</button>
+		<button id = speak style="display: block; margin: 0 auto;">Speak Now</button>
+	</div>
+	<p id = sentence></p>
 
 	<script src="js/app.js"></script>
 </body>

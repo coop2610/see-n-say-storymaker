@@ -1,2 +1,68 @@
-@charset "utf-8";
-/* Assignment 1 | COMP1073 Client-Side JavaScript */
+@charset "utf-8";/* Assignment 1 | COMP1073 Client-Side JavaScript *//* Style for buttons */
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #79d27c;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+body{
+    text-align: center;
+    margin-bottom: 3px;
+}
+button:hover {
+    background-color: #3e8e41;
+}
+/* Style for container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* Style for heading */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+/* Style for <p> */
+#sentence {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+/* Style for sentence output */
+.output {
+    font-size: 24px;
+    margin: 20px 0;
+}
+/* Style for speak button */
+#speak {
+    background-color: #5cd6ff;
+}
+#speak:hover {
+    background-color: rgb(1, 114, 142);
+}
+
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(194, 199, 249);
+}  
+
+.flex-child{
+    margin: 20px;
+}
+
+ /*
+    This adds some basic styles to the buttons, container, heading, and sentence output elements. 
+    It also changes the background color and hover state of the "Speak" button to distinguish it 
+    from the other buttons
+ */
